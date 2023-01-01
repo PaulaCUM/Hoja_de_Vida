@@ -1,0 +1,242 @@
+* {
+    /*Definir que el tamaño del bloque incluya padding, margenes y bordes*/
+    box-sizing: border-box;
+    /*Darle una tipografia a la pagina*/
+    font-family: 'Poppins', sans-serif;
+    /*Sin margenes*/
+    margin: 0;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+/*-------------HEADER-------------*/
+header {
+    /*hacer que la barra de navegacion se mantenga fija en toda la pag*/
+    position: fixed;
+    /*Definir el color con su transparencia y ancho de 100% para que ocupe toda la pag*/
+    background-color: rgba(16, 208, 201, 0.6);
+    width: 100%;
+}
+
+.header-container {
+    margin: auto;
+    max-width: 1700px;
+    padding: 0.8rem;
+}
+
+header a {
+    /*Color letra
+    Quitarle el subrayado del link
+    Padding derecho e izquierdo*/
+    color: beige;
+    text-decoration: none;
+    padding: 0rem 1.8rem;
+}
+
+nav {
+    float: right;
+    margin: 9px;
+}
+
+header li {
+    /*Elementos listas del header tipo inline para que uno quede al lado del otro
+    Quitarle los puntos de la lista*/
+    display: inline;
+    list-style: none;
+}
+
+h1 {
+    display: inline;
+}
+
+/*-------------PRESENTATION-------------*/
+.presentation {
+    height: 720px;
+    font-size: 18px;
+}
+
+.Video-Programming {
+    height: 720px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.Video-Programming video {
+    /*Que el objeto ocupe el maximo posible del bloque que lo contiene sin modificar proporciones de ancho y alto
+    va a recortar lo que no quepa*/
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.dark-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.presentation-text {
+    color: white;
+    text-align: center;
+    padding: 285px 200px;
+    margin: auto;
+}
+
+.presentation-text p {
+    margin: 20px auto;
+    width: 70%;
+}
+
+.presentation-text a {
+    color: lightgreen;
+}
+
+/*-------------HABILIDADES O SKILLS-------------*/
+
+.skills {
+    height: 1000px;
+    font-size: 18px;
+}
+
+.skills-text {
+    width: 50%;
+    height: 50%;
+}
+
+.skills-content {
+    text-align: justify;
+    padding: 130px 30px;
+}
+
+.skills-title {
+    text-align: center;
+    margin: 2rem;
+}
+
+.Empresas {
+    padding: 0;
+}
+
+#skills-img1 {
+    background: url(./Recursos/Imagenes/Brazo\ robot.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#skills-img2 {
+    background: url(./Recursos/Imagenes/Robot\ niño.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-------------WORK EXPERIENCE-------------*/
+
+.workExperience {
+    clear: both;
+    font-size: 20px;
+    text-align: center;
+    background: url(./Recursos/Imagenes/Robot.jpg);
+    background-position: center;
+}
+
+.workEx-inner {
+    padding: 3rem;
+    color: white;
+}
+
+.workEx-title {
+    margin: 3rem;
+}
+
+.workExperience ul {
+    padding: 0;
+}
+
+.workExperience ul li {
+    list-style: none;
+    padding: 2rem;
+}
+
+.workExperience ul li div {
+    display: inline;
+    padding: 4rem;
+}
+
+#Logos {
+    height: 80px;
+}
+
+/*-------------CONTACT-------------*/
+
+.Contact {
+    height: 550px;
+    text-align: center;
+}
+
+.form-center {
+    display: block;
+}
+
+.form-left {
+    text-align: center;
+    width: 50%;
+    height: 300px;
+    float: left;
+}
+
+.form-right {
+    width: 50%;
+    height: 300px;
+    float: right;
+}
+
+.Contact label {
+    display: block;
+    padding: 1.2rem;
+}
+
+input[type="text"], input[type="time"], input[type="date"], input[type="email"], input[type="number"] {
+    width: 12rem;
+    height: 2rem;
+}
+
+textarea {
+    margin: 1rem;
+}
+
+input[type="submit"] {
+    font-size: 18px;
+    margin: 1rem;
+    height: 3rem;
+    width: 8rem;
+    display: block;
+    margin: auto;
+}
+
+button[type="button"] {
+    font-size: 12px;
+    margin: 1rem;
+    height: 1rem;
+    width: 15rem;
+}
+
+/*-------------FOOTER-------------*/
+
+footer {
+    color: white;
+    background-color: darkblue;
+    text-align: center;
+    height: 3rem;
+    padding: 1rem;
+}

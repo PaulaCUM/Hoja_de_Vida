@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo de la pestaña. Es el nombre que aparece en la pestaña web-->
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <!--Titulo principal de la pagina. Debe haber solo un (1) h1 por pagina-->
+            <h1><a href="index.html">Ing. Paula Useche M.Sc.</a></h1>
+            <!--Navegacion por la pagina web-->
+            <nav>
+                <!--Lista de elementos NO numerados-->
+                <ul>
+                    <!--Elementos del menu-->
+                    <li><a href="#presentation">¿Quién soy?</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#workExperience">Experiencia laboral</a></li>
+                    <li><a href="#References">Referencias personales</a></li>
+                    <li><a href="#Contact">¡Contáctame!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="presentation" id="presentation">
+        <div class="Video-Programming">
+            <video src="./Recursos/Videos/Video.mp4" autoplay muted loop></video>
+        </div>
+        <div class="dark-overlay">
+            <div class="presentation-text">
+                <h2>Conóceme</h2>
+                <br>
+                <p>
+                    Soy la ingeniera mecatrónica Paula Useche, con maestría en ingeniería mecatrónica, 
+                    con diploma CUM LAUDE y distinciones en el grado como medalla al mérito académico 
+                    y mención de honor.
+                </p>
+                <br>
+                <a target="_blank" href="https://www.linkedin.com/in/paula-useche-87468a59/">Visita mi LinkedIn dando clic aquí</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="skills" id="skills">
+        <div class="skills-text left" id="skills-img1">
+            <!--Aquí irá una imagen que se pondra con CSS-->
+        </div>
+        <div class="skills-text right skills-content">
+            <h2 class="skills-title">Habilidades de programación</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor mollitia cumque corrupti ab eos quaerat.
+            </p>
+        </div>
+
+        <div class="skills-text right" id="skills-img2">
+            <!--Aqui va otra imagen que se pondrá con CSS-->
+        </div>
+
+        <div class="skills-text left skills-content">
+            <h2 class="skills-title">Proyectos desarrollados</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Animi accusamus possimus corrupti nobis ipsam eaque cum quam 
+                voluptates necessitatibus expedita.
+            </p>
+        </div>
+    </section>
+
+    <section class="workExperience" id="workExperience">
+        <div class="dark-overlay">
+            <div class="workEx-inner">
+                <h2 class="workEx-title">Experiencia laboral</h2>
+                <!--ol es lista ordenada
+                    ul es lista NO ordenada-->
+                    <ul>
+                        <li >
+                            <div>
+                                <img class="Empresas" src="./Recursos/Imagenes/etraining1.jpg" id="Logos">
+                            </div>                            
+                            <div>E-training S.A.S.</div>
+                            <div>Descripción</div>
+                        </li>
+                        <li>
+                            <img class="Empresas" src="./Recursos/Imagenes/Ligths.png" id="Logos">
+                            <div>+Ligths Design Group</div>
+                            <div>Descripción</div>
+                        </li>
+                        <li>
+                            <img class="Empresas" src="./Recursos/Imagenes/UMNG.jpg" id="Logos">
+                            <div>UMNG</div>
+                            <div>Descripción</div>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="References" id="References">
+        <h2>Referencias personales</h2>
+        <div>
+            <h3>E-training</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, exercitationem.
+                
+                <!-- <h4>Ejemplo de lista ordenada</h4>
+                <ol>
+                    <li value="15">Valor 1</li>
+                    <li>Valor 2</li>
+                    <li> -->
+                        <!--Lista anidada-->
+                        <!-- <ol> -->
+                            <!-- Con Style definimos el tipo de icono o numeracion que queremos
+                            para los items de la lista -->
+                            <!-- <li style="list-style-type: lower-alpha;">Sub Valor 1</li>
+                            <li style="list-style-type: lower-alpha;">Sub Valor 2</li>
+                            <li style="list-style-type: lower-alpha;">Sub Valor 3</li>
+                        </ol>
+                    </li>
+                    <li>Valor 3</li>
+                </ol> -->
+            
+            </p>
+        </div>
+        <div>
+            <h3>+Ligths</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, exercitationem.
+            </p>
+        </div>
+        <div>
+            <h3>UMNG</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, exercitationem.
+            </p>
+        </div>
+    </section>
+
+    <section class="Contact" id="Contact">
+        <h2>¡Contáctame!</h2>
+        <form action="/formulario" method="post">
+            <div class="form-center">
+                <div class="form-left">
+                    <!--en el input el parametro "name" es el que se va a conectar con el
+                    servidor que reciba la informacion, de tal manera que la informacion
+                    almacenada llega al servidor como un objeto { nombre : valor }-->
+                    <label for="Fecha">Fecha de lectura de la hoja de vida</label>
+                    <input type="date" name="ReadDate" id="Fecha">
+        
+                    <label for="Empresa">Empresa interesada</label>
+                    <input type="text" name="Company" id="Empresa" placeholder="Company Name">
+        
+                    <label for="Hora">Hora</label>
+                    <input type="time" name="Hour" id="Hora">
+                </div>
+
+                <div class="form-right">
+                    <label for="email">Email empresarial</label>
+                    <input type="email" name="Email" id="email" placeholder="company@email.com">
+        
+                    <label for="Nivel">Nivel de interes del 1 al 5, siendo 5 muy interesado</label>
+                    <input value="5" type="number" name="Level" id="Nivel" placeholder="5">
+        
+                    <label for="Telefono">Telefono de contacto</label>
+                    <input type="text" name="Telephone" id="Telefono" placeholder="Ingrese un número de contacto">
+                </div>
+    
+            </div>
+
+            <label for="Comentario">¡Deja tu comentario!</label>
+            <textarea name="" id="Comentario" cols="100" rows="7" placeholder="Ingrese un comentario..."></textarea>
+
+            <!--Ejemplos de botones
+            Submit: Envia el formulario a donde le indiquemos
+            Button: con JavaScript se programa qué hacer con él
+            Reset: Reinicia los valores por defector en el formulario-->
+            <input type="submit" value="Enviar formulario">
+            <button type="button">
+                Boton programable con JavaScript
+                <!--<img src="./Recursos/Imagenes/Colores.jpg" id="ImagButton">-->
+            </button>
+            <button type="reset">Resetear los valores por defecto</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Ing. Paula Useche M.Sc. &copy;</p>
+    </footer>
+</body>
+</html>
