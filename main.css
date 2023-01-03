@@ -22,12 +22,25 @@ header {
     /*Definir el color con su transparencia y ancho de 100% para que ocupe toda la pag*/
     background-color: rgba(16, 208, 201, 0.6);
     width: 100%;
+    z-index: 1;
+}
+
+/* MATERILIZE */
+header h1 {
+    font-size: 37px;
+}
+
+/* MATERILIZE */
+.header-container nav {
+    background: none;
+    box-shadow: none;    
+    height: 55px;
 }
 
 .header-container {
     margin: auto;
     max-width: 1700px;
-    padding: 0.8rem;
+    padding: 1rem 0.3rem 0rem;
 }
 
 header a {
@@ -41,14 +54,16 @@ header a {
 
 nav {
     float: right;
-    margin: 9px;
+    margin: 0 9px;
 }
 
-header li {
+.header-container li {
     /*Elementos listas del header tipo inline para que uno quede al lado del otro
     Quitarle los puntos de la lista*/
     display: inline;
     list-style: none;
+    margin: auto 10px;
+    height: 55px;
 }
 
 h1 {
@@ -81,18 +96,22 @@ h1 {
 .dark-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .presentation-text {
     color: white;
     text-align: center;
-    padding: 285px 200px;
+    padding: 240px 150px;
     margin: auto;
 }
 
+.presentation-text h2 {
+    font-size: 35px;
+}
+
 .presentation-text p {
-    margin: 20px auto;
+    margin: 10px auto;
     width: 70%;
 }
 
@@ -100,10 +119,15 @@ h1 {
     color: lightgreen;
 }
 
+.presentation-text svg {
+    width: 40px;
+    color: aqua;
+}
+
 /*-------------HABILIDADES O SKILLS-------------*/
 
 .skills {
-    height: 1000px;
+    height: 650px;
     font-size: 18px;
 }
 
@@ -120,6 +144,67 @@ h1 {
 .skills-title {
     text-align: center;
     margin: 2rem;
+    font-size: 35px;
+}
+
+.skills-centrar {
+    margin: auto;
+}
+
+.carousel-item h3 {
+    font-size: 34px;
+    text-align: center;
+    text-shadow: 1px 1px 1px white, 1px 1px 5px white;
+
+}
+
+.linea-division {
+    width: 60%;
+    height: 2px;
+    background-color: #4f4f4f;
+    margin: 0;
+}
+
+.carousel-item p {
+    text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px 2px white, 1px 1px 10px white;
+    /* background-color: rgba(255, 255, 255, 0.3); */
+}
+
+/* >>>>> ESTILOS MATERIALIZE <<<<< */
+
+.carousel {
+    min-height: 500px;
+}
+
+.skills .carousel .carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    /* background-color: gray; */
+    width: 650px;
+    height: 500px;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.skills .carousel .indicators .indicator-item {
+    /* border-radius: 0; */
+    transform: rotate(45deg);
+    margin: 10px 10px;
+    background: darkorchid;
 }
 
 #skills-img1 {
@@ -142,8 +227,9 @@ h1 {
     clear: both;
     font-size: 20px;
     text-align: center;
-    background: url(./Recursos/Imagenes/Robot.jpg);
+    background: url(./Recursos/Imagenes/Paisaje+Yoga.jpg);
     background-position: center;
+    background-size: cover;
 }
 
 .workEx-inner {
@@ -152,17 +238,20 @@ h1 {
 }
 
 .workEx-title {
-    margin: 0 3rem 3rem;
+    margin: 0 3rem 2rem;
+    font-size: 38px;
 }
 
-.workExperience ul li {
+.workExperience table ul li {
     padding: 4px 0;
     list-style-type: circle;
+    position: relative;
+    left: 18px;
 }
 
-td {
-    padding: 15px;
-    font-size: 18px;
+.workExperience table td {
+    padding: 25px 10px;
+    /* font-size: 18px; */
 }
 
 .Logo_td {
@@ -173,6 +262,7 @@ td {
 .Nombre_td {
     width: 40%;
     text-align: left;
+    font-size: 18px;
 }
 
 .Descripcion_td {
@@ -186,7 +276,7 @@ td {
     border-radius: 10px;
 }
 
-/*-------------CONTACT-------------*/
+/*------------- CONTACT + FORMULARIO -------------*/
 
 .Contact {
     height: 550px;
@@ -218,6 +308,7 @@ td {
 input[type="text"], input[type="time"], input[type="date"], input[type="email"], input[type="number"] {
     width: 12rem;
     height: 2rem;
+    /* position: absolute; */
 }
 
 textarea {

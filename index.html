@@ -5,8 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Titulo de la pestaña. Es el nombre que aparece en la pestaña web-->
     <title>Hoja de Vida</title>
+    <!-- CSS -->
     <link rel="stylesheet" href="main.css">
+    <!-- MATERIALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- FONT AWSOME -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
 <body>
 
     <header>
@@ -16,10 +23,10 @@
             <!--Navegacion por la pagina web-->
             <nav>
                 <!--Lista de elementos NO numerados-->
-                <ul>
+                <ul class="right">
                     <!--Elementos del menu-->
                     <li><a href="#presentation">¿Quién soy?</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#skills">Proyectos desarrollados</a></li>
                     <li><a href="#workExperience">Experiencia laboral</a></li>
                     <li><a href="#References">Referencias personales</a></li>
                     <li><a href="#Contact">¡Contáctame!</a></li>
@@ -38,19 +45,67 @@
                 <br>
                 <p>
                     Soy la ingeniera mecatrónica Paula Useche, con maestría en ingeniería mecatrónica, 
-                    con diploma CUM LAUDE y distinciones en el grado como medalla al mérito académico 
-                    y mención de honor.
+                    diploma CUM LAUDE, medalla al mérito académico y mención de honor.
                 </p>
                 <br>
-                <a target="_blank" href="https://www.linkedin.com/in/paula-useche-87468a59/">Visita mi LinkedIn dando clic aquí</a>
+                <a target="_blank" href="https://www.linkedin.com/in/paula-useche-87468a59/">                    
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="color: lightblue;"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>                    
+                    <!-- <i class="fa-brands fa-linkedin" style="color: aqua;"></i> -->
+                </a>
             </div>
         </div>
     </section>
     
     <section class="skills" id="skills">
-        <div class="skills-text left" id="skills-img1">
-            <!--Aquí irá una imagen que se pondra con CSS-->
+
+
+        <!-- ESTRUCTURA BASICA DE MATERILIZA -->
+        <!-- Se crea un contenedor que automaticamente se centra en la pagina
+        con un div de clase row se agrega la cantidad de filas
+        con un div de clase col se agregan las columnas, espicificando la cantidad con s12 (12 columnas para el ejemplo)
+        -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+
+                    <h2 class="skills-title">Proyectos desarrollados</h2>
+
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <h3>Blog</h3>
+                            <div class="linea-division"></div>
+                            <p>Ejemplo básico de uso HTML y CSS</p>
+                            <img src="./Recursos/Imagenes/Proyectos/Blog.jpg" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Virtual Educa</h3>
+                            <div class="linea-division"></div>
+                            <p>Stan y taller de robótica y programación</p>
+                            <img src="./Recursos/Imagenes/Proyectos/Virtual Educa-0000.jpg" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Ministerio TIC</h3>
+                            <div class="linea-division"></div>
+                            <p>Cierre del evento "Destrezas digitales 4.0"</p>
+                            <img src="./Recursos/Imagenes/Proyectos/MinTIC.jpeg" alt="">
+                        </div>
+
+                        <div class="carousel-item">
+                            <h3>Computadores para Educar</h3>
+                            <div class="linea-division"></div>
+                            <p>Taller de programación para niños de toda Colombia</p>
+                            <img src="./Recursos/Imagenes/Proyectos/CPE.jpeg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
+
+
+        <!-- <div class="skills-text left" id="skills-img1"></div>
         <div class="skills-text right skills-content">
             <h2 class="skills-title">Habilidades de programación</h2>
             <p>
@@ -58,9 +113,7 @@
             </p>
         </div>
 
-        <div class="skills-text right" id="skills-img2">
-            <!--Aqui va otra imagen que se pondrá con CSS-->
-        </div>
+        <div class="skills-text right" id="skills-img2"></div>
 
         <div class="skills-text left skills-content">
             <h2 class="skills-title">Proyectos desarrollados</h2>
@@ -69,39 +122,14 @@
                 Animi accusamus possimus corrupti nobis ipsam eaque cum quam 
                 voluptates necessitatibus expedita.
             </p>
-        </div>
+        </div> -->
+
     </section>
 
     <section class="workExperience" id="workExperience">
         <div class="dark-overlay">
             <div class="workEx-inner">
                 <h2 class="workEx-title">Experiencia laboral</h2>
-                <!--ol es lista ordenada
-                    ul es lista NO ordenada-->
-                    <!-- <ul>
-                        <li>
-                            <div>
-                                <img src="./Recursos/Imagenes/etraining1.jpg" id="Logos">
-                            </div>                            
-                            <div>
-                                E-training S.A.S. <br>
-                                Directora pedagógica <br>
-                                Diciembre 2019 – Actualidad
-                            </div>
-                            <div>Descripción</div>
-                        </li>
-                        <li>
-                            <img src="./Recursos/Imagenes/Ligths.png" id="Logos">
-                            <div>+Ligths Design Group</div>
-                            <div>Descripción</div>
-                        </li>
-                        <li>
-                            <img src="./Recursos/Imagenes/UMNG.jpg" id="Logos">
-                            <div>UMNG</div>
-                            <div>Descripción</div>
-                        </li>
-                    </ul> -->
-
                     <table>
                         <!-- ETRAINING -->
                         <tr>
@@ -236,5 +264,10 @@
     <footer>
         <p>Ing. Paula Useche M.Sc. &copy;</p>
     </footer>
+
+    <!-- MATERIALIZE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="./main.js"></script>
 </body>
 </html>
