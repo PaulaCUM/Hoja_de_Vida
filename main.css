@@ -122,10 +122,6 @@ h1 {
     margin: 2rem;
 }
 
-.Empresas {
-    padding: 0;
-}
-
 #skills-img1 {
     background: url(./Recursos/Imagenes/Brazo\ robot.jpg);
     background-position: center;
@@ -156,25 +152,38 @@ h1 {
 }
 
 .workEx-title {
-    margin: 3rem;
-}
-
-.workExperience ul {
-    padding: 0;
+    margin: 0 3rem 3rem;
 }
 
 .workExperience ul li {
-    list-style: none;
-    padding: 2rem;
+    padding: 4px 0;
+    list-style-type: circle;
 }
 
-.workExperience ul li div {
-    display: inline;
-    padding: 4rem;
+td {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.Logo_td {
+    width: 10%;
+    text-align: right;
+}
+
+.Nombre_td {
+    width: 40%;
+    text-align: left;
+}
+
+.Descripcion_td {
+    width: 50%;
+    text-align: left;
+    font-size: 16px;
 }
 
 #Logos {
     height: 80px;
+    border-radius: 10px;
 }
 
 /*-------------CONTACT-------------*/
