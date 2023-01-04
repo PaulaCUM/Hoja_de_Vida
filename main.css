@@ -62,7 +62,7 @@ nav {
     Quitarle los puntos de la lista*/
     display: inline;
     list-style: none;
-    margin: auto 10px;
+    margin: auto 5px;
     height: 55px;
 }
 
@@ -117,6 +117,7 @@ h1 {
 
 .presentation-text a {
     color: lightgreen;
+    margin: 0 10px;
 }
 
 .presentation-text svg {
@@ -126,9 +127,23 @@ h1 {
 
 /*-------------HABILIDADES O SKILLS-------------*/
 
+#particles-js {
+    width: 100%;
+    height: 650px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
 .skills {
     height: 650px;
     font-size: 18px;
+    background: url("./Recursos/Imagenes/Fondo\ suave.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -3;
+    /* position: relative; */
 }
 
 .skills-text {
@@ -274,6 +289,60 @@ h1 {
 #Logos {
     height: 80px;
     border-radius: 10px;
+}
+
+/*------------- HABILIDADES DE PROGRAMACION -------------*/
+
+.light-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.Niveles {
+    background: url(./Recursos/Imagenes/Montañas.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.Niveles h2 {
+   margin: 0;
+   padding: 2rem 0;
+   text-align: center;
+   font-size: 38px;
+   /* color: white; */
+}
+
+.Niveles .niveles-tabla {
+    border-color: white;
+}
+
+.Niveles .niveles-tabla th {
+    text-align: center;
+}
+
+.Niveles .niveles-tabla img {
+    width: 80%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: 1s ease-in-out all;
+}
+
+.Niveles .niveles-tabla img.izquierda {
+    transform: translate(-40px);
+}
+
+.Niveles .niveles-tabla img.derecha {
+    transform: translate(40px);
+}
+
+.Niveles .niveles-tabla img.abajo {
+    transform: translateY(50px);
+}
+
+.Niveles .niveles-tabla img.visible {
+    opacity: 1;
+    transform: scale(1) translateX(0) translateY(0);
 }
 
 /*------------- CONTACT + FORMULARIO -------------*/
