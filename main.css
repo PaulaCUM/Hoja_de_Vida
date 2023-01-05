@@ -70,6 +70,10 @@ h1 {
     display: inline;
 }
 
+body {
+    background-color: aliceblue;
+}
+
 /*-------------PRESENTATION-------------*/
 .presentation {
     height: 720px;
@@ -345,11 +349,71 @@ h1 {
     transform: scale(1) translateX(0) translateY(0);
 }
 
-/*------------- CONTACT + FORMULARIO -------------*/
+/*------------- REFERENCIAS PERSONALES -------------*/
+
+.References {
+    width: 95%;
+    height: 300px;
+    margin: auto;
+}
+
+.References h2 {
+    font-size: 38px;
+    text-align: center;
+}
+
+.References h3 {
+    font-size: 30px;
+    margin: 0px 0px 15px;
+    text-align: center;
+}
+
+.References .Post {
+    transition: box-shadow 0.3s ease;
+    background-color: bisque;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    float: inline-start;
+    width: 30%;
+    height: 200px;
+}
+
+.References .Post:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 30%);
+}
+
+.References .Post .Logos-referencias {
+    height: 35%;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.References .Post svg {
+    height: 15px;
+    display: inline-block;
+    margin: 0 10px;    
+}
+
+.References .Post p {
+    text-align: center;
+    display: inline-block;
+
+}
+
+/*------------- FORMULARIO -------------*/
 
 .Contact {
-    height: 550px;
+    height: 560px;
     text-align: center;
+}
+
+.Contact h2 {
+    font-size: 38px;
+    text-align: center;
+    margin: 2rem 0 3rem;
 }
 
 .form-center {
@@ -359,38 +423,68 @@ h1 {
 .form-left {
     text-align: center;
     width: 50%;
-    height: 300px;
+    height: 240px;
     float: left;
 }
 
 .form-right {
     width: 50%;
-    height: 300px;
+    height: 240px;
     float: right;
 }
 
 .Contact label {
     display: block;
-    padding: 1.2rem;
-}
-
-input[type="text"], input[type="time"], input[type="date"], input[type="email"], input[type="number"] {
-    width: 12rem;
-    height: 2rem;
-    /* position: absolute; */
-}
-
-textarea {
-    margin: 1rem;
-}
-
-input[type="submit"] {
+    margin: 0 0 1rem;
     font-size: 18px;
-    margin: 1rem;
-    height: 3rem;
+    color: steelblue;
+}
+
+.Contact form input[type="text"] { /* , input[type="time"], input[type="date"], input[type="email"], input[type="number"] */
+    width: 16rem;
+    height: 2rem;
+}
+
+.Contact form input[type="time"] {
+    width: 6rem;
+    height: 2rem;
+}
+
+.Contact form input[type="date"] {
     width: 8rem;
+    height: 2rem;
+}
+
+.Contact form input[type="email"] {
+    width: 15rem;
+    height: 2rem;
+}
+
+.Contact form input[type="number"] {
+    width: 4rem;
+    height: 2rem;
+}
+
+.Contact form textarea {
+    margin: 0.5rem;
+    width: 60%;
+    height: 80px;
+}
+
+.Contact form input[type="submit"] {
+    font-size: 16px;
+    /* margin: 1.5rem; */
+    height: 3rem;
+    width: 12rem;
     display: block;
     margin: auto;
+    background-color: rgba(76, 76, 164, 0.3);
+    cursor: pointer;
+}
+
+.Contact form input[type="submit"]:hover {
+    transform: scale(1.05);
+    transition: .2s ease-in-out all;
 }
 
 button[type="button"] {
@@ -400,12 +494,24 @@ button[type="button"] {
     width: 15rem;
 }
 
+.Contact form label {
+    padding: 0;
+}
+
 /*-------------FOOTER-------------*/
 
 footer {
     color: white;
     background-color: darkblue;
-    text-align: center;
-    height: 3rem;
+    text-align: left;
+    height: 5rem;
     padding: 1rem;
+}
+
+footer p {
+    display: inline-block;
+}
+
+footer a {
+    color: aquamarine;
 }

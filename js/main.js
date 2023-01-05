@@ -1,3 +1,4 @@
+/* ------------------- CARRUSEL ------------------- */
 // Funcion para controlar y programar el carrusel de imagenes
 document.addEventListener('DOMContentLoaded', () => {
     const elementosCarrusel = document.querySelectorAll('.carousel');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/* ------------------- ANIMACION IMAGENES DE NIVEL ------------------- */
 // Leer la imagen - Funcion tipo flecha
 const imagen1 = document.getElementById('imagen1');
 const imagen2 = document.getElementById('imagen2');
@@ -43,7 +45,7 @@ const cargarImagen = (entradas, observador) => {
 // * los parametros que ayudan a determinar cuando la imagen ha entrado en pantalla
 const observador = new IntersectionObserver(cargarImagen, {
     root: null, //con esto se hace referencia al viewport (toda la ventada)
-    rootMargin: '200px 0px 0px 0px', //Este es el margen que se usara para detectar cuando la imagen se debe comenzar a animar
+    rootMargin: '200px 0px 50px 0px', //Este es el margen que se usara para detectar cuando la imagen se debe comenzar a animar
     threshold: 0.8 // de 0.0 (todo fuera) a 1.0 (todo dentro) = Se usa para determinar si la animacion se ejecuta cuando toda la imagen este dentro del margen, o una parte de ella
 });
 
@@ -59,3 +61,77 @@ observador.observe(imagen7);
 observador.observe(imagen8);
 observador.observe(imagen9);
 observador.observe(imagen10);
+
+/* ------------------- REFERENCIAS PERSONALES ------------------- */
+// Animacion de cada una de las tarjetas de referencias al pasar el mouse por encima
+
+const card1 = document.getElementById("Card1");
+const card2 = document.getElementById("Card2");
+const card3 = document.getElementById("Card3");
+
+// TARJETA 1
+card1.addEventListener('mouseover', (e) => {
+    card1.style.setProperty('--animate-duration','.5s');
+    card1.classList.add('animate__pulse');
+})
+
+card1.addEventListener('mouseout', (e) => {
+    card1.classList.remove('animate__pulse');
+})
+
+// TARJETA 2
+card2.addEventListener('mouseover', (e) => {
+    card2.style.setProperty('--animate-duration','.5s');
+    card2.classList.add('animate__pulse');
+})
+
+card2.addEventListener('mouseout', (e) => {
+    card2.classList.remove('animate__pulse');
+})
+
+// TARJETA 3
+card3.addEventListener('mouseover', (e) => {
+    card3.style.setProperty('--animate-duration','.5s');
+    card3.classList.add('animate__pulse');
+})
+
+card3.addEventListener('mouseout', (e) => {
+    card3.classList.remove('animate__pulse');
+})
+
+/* ------------------- FORMULARIO ------------------- */
+// Animacion de cada uno de los inputs al pasar el mouse por encima
+
+const email = document.getElementById("email");
+const empresa = document.getElementById("Empresa");
+const telefono = document.getElementById("Telefono");
+
+// INPUT 1
+email.addEventListener('mouseover', (e) => {
+    email.style.setProperty('--animate-duration','.3s');
+    email.classList.add('animate__pulse');
+})
+
+email.addEventListener('mouseout', (e) => {
+    email.classList.remove('animate__pulse');
+})
+
+// INPUT 2
+empresa.addEventListener('mouseover', (e) => {
+    empresa.style.setProperty('--animate-duration','.3s');
+    empresa.classList.add('animate__pulse');
+})
+
+empresa.addEventListener('mouseout', (e) => {
+    empresa.classList.remove('animate__pulse');
+})
+
+// INPUT 3
+telefono.addEventListener('mouseover', (e) => {
+    telefono.style.setProperty('--animate-duration','.3s');
+    telefono.classList.add('animate__pulse');
+})
+
+telefono.addEventListener('mouseout', (e) => {
+    telefono.classList.remove('animate__pulse');
+})
