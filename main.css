@@ -111,6 +111,10 @@ header .menu a svg {
     margin-right: 5px;
 }
 
+header .btn-menu {
+    cursor: pointer;
+}
+
 body {
     background-color: aliceblue;
 }
@@ -126,7 +130,8 @@ body {
 }
 
 .headroom--unpinned {
-    transform: translateY(-100%); /* -70% para mostrar solo los links*/
+    transform: translateY(-250%); /* -70% para mostrar solo los links*/
+
 }
 
 /*------------- MEDIAQUERIES -------------*/
@@ -521,11 +526,12 @@ body {
     float: right;
 }
 
-.Contact label {
+.Contact form label {
     display: block;
-    margin: 0 0 1rem;
+    margin-bottom: 1.3rem;
     font-size: 18px;
     color: steelblue;
+    padding: 0;
 }
 
 .Contact form input[type="text"] { /* , input[type="time"], input[type="date"], input[type="email"], input[type="number"] */
@@ -534,12 +540,12 @@ body {
 }
 
 .Contact form input[type="time"] {
-    width: 6rem;
+    width: 4rem;
     height: 2rem;
 }
 
 .Contact form input[type="date"] {
-    width: 8rem;
+    width: 7rem;
     height: 2rem;
 }
 
@@ -580,10 +586,6 @@ button[type="button"] {
     margin: 1rem;
     height: 1rem;
     width: 15rem;
-}
-
-.Contact form label {
-    padding: 0;
 }
 
 /*------------- VALIDACION DE FORMULARIO -------------*/

@@ -22,9 +22,11 @@
             <!--Titulo principal de la pagina. Debe haber solo un (1) h1 por pagina-->
             <img class="left" src="./Recursos/Imagenes/2022.jpg" alt="">
             <h1><a href="index.html">Ing. Paula Useche M.Sc.</a></h1>
-            <a href="#" class="btn-menu right" id="btn-menu"><svg class="iconoBars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="color: beige;"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
+            <!-- <h1>Ing. Paula Useche M.Sc.</h1> -->
+            <div class="btn-menu right" id="btn-menu">
+                <svg class="iconoBars" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="color: beige;"><path fill="currentColor" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
                 <svg class="iconoX right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style="color: beige;"><path fill="currentColor" d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg>
-            </a>
+            </div>
         </div>
         <!--Navegacion por la pagina web-->
         <div class="right">
@@ -32,24 +34,24 @@
                 <!--Lista de elementos NO numerados-->
                 <ul class="enlaces right" id="enlaces">
                     <!--Elementos del menu-->
-                    <li><a href="#presentation">
+                    <li><a href="#presentation" id="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="color: beige;"><path fill="currentColor" d="M543.8 287.6c17 0 32-14 32-32.1c1-9-3-17-11-24L512 185V64c0-17.7-14.3-32-32-32H448c-17.7 0-32 14.3-32 32v36.7L309.5 7c-6-5-14-7-21-7s-15 1-22 8L10 231.5c-7 7-10 15-10 24c0 18 14 32.1 32 32.1h32v69.7c-.1 .9-.1 1.8-.1 2.8V472c0 22.1 17.9 40 40 40h16c1.2 0 2.4-.1 3.6-.2c1.5 .1 3 .2 4.5 .2H160h24c22.1 0 40-17.9 40-40V448 384c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v64 24c0 22.1 17.9 40 40 40h24 32.5c1.4 0 2.8 0 4.2-.1c1.1 .1 2.2 .1 3.3 .1h16c22.1 0 40-17.9 40-40V455.8c.3-2.6 .5-5.3 .5-8.1l-.7-160.2h32z"/></svg>
                         Conóceme</a>
                     </li>
-                    <li><a href="#skills">
+                    <li><a href="#skills" id="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="color: beige;"><path fill="currentColor" d="M308.5 135.3c7.1-6.3 9.9-16.2 6.2-25c-2.3-5.3-4.8-10.5-7.6-15.5L304 89.4c-3-5-6.3-9.9-9.8-14.6c-5.7-7.6-15.7-10.1-24.7-7.1l-28.2 9.3c-10.7-8.8-23-16-36.2-20.9L199 27.1c-1.9-9.3-9.1-16.7-18.5-17.8C173.7 8.4 166.9 8 160 8s-13.7 .4-20.4 1.2c-9.4 1.1-16.6 8.6-18.5 17.8L115 56.1c-13.3 5-25.5 12.1-36.2 20.9L50.5 67.8c-9-3-19-.5-24.7 7.1c-3.5 4.7-6.8 9.6-9.9 14.6l-3 5.3c-2.8 5-5.3 10.2-7.6 15.6c-3.7 8.7-.9 18.6 6.2 25l22.2 19.8C32.6 161.9 32 168.9 32 176s.6 14.1 1.7 20.9L11.5 216.7c-7.1 6.3-9.9 16.2-6.2 25c2.3 5.3 4.8 10.5 7.6 15.6l3 5.2c3 5.1 6.3 9.9 9.9 14.6c5.7 7.6 15.7 10.1 24.7 7.1l28.2-9.3c10.7 8.8 23 16 36.2 20.9l6.1 29.1c1.9 9.3 9.1 16.7 18.5 17.8c6.7 .8 13.5 1.2 20.4 1.2s13.7-.4 20.4-1.2c9.4-1.1 16.6-8.6 18.5-17.8l6.1-29.1c13.3-5 25.5-12.1 36.2-20.9l28.2 9.3c9 3 19 .5 24.7-7.1c3.5-4.7 6.8-9.5 9.8-14.6l3.1-5.4c2.8-5 5.3-10.2 7.6-15.5c3.7-8.7 .9-18.6-6.2-25l-22.2-19.8c1.1-6.8 1.7-13.8 1.7-20.9s-.6-14.1-1.7-20.9l22.2-19.8zM208 176c0 26.5-21.5 48-48 48s-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48zM504.7 500.5c6.3 7.1 16.2 9.9 25 6.2c5.3-2.3 10.5-4.8 15.5-7.6l5.4-3.1c5-3 9.9-6.3 14.6-9.8c7.6-5.7 10.1-15.7 7.1-24.7l-9.3-28.2c8.8-10.7 16-23 20.9-36.2l29.1-6.1c9.3-1.9 16.7-9.1 17.8-18.5c.8-6.7 1.2-13.5 1.2-20.4s-.4-13.7-1.2-20.4c-1.1-9.4-8.6-16.6-17.8-18.5L583.9 307c-5-13.3-12.1-25.5-20.9-36.2l9.3-28.2c3-9 .5-19-7.1-24.7c-4.7-3.5-9.6-6.8-14.6-9.9l-5.3-3c-5-2.8-10.2-5.3-15.6-7.6c-8.7-3.7-18.6-.9-25 6.2l-19.8 22.2c-6.8-1.1-13.8-1.7-20.9-1.7s-14.1 .6-20.9 1.7l-19.8-22.2c-6.3-7.1-16.2-9.9-25-6.2c-5.3 2.3-10.5 4.8-15.6 7.6l-5.2 3c-5.1 3-9.9 6.3-14.6 9.9c-7.6 5.7-10.1 15.7-7.1 24.7l9.3 28.2c-8.8 10.7-16 23-20.9 36.2L315.1 313c-9.3 1.9-16.7 9.1-17.8 18.5c-.8 6.7-1.2 13.5-1.2 20.4s.4 13.7 1.2 20.4c1.1 9.4 8.6 16.6 17.8 18.5l29.1 6.1c5 13.3 12.1 25.5 20.9 36.2l-9.3 28.2c-3 9-.5 19 7.1 24.7c4.7 3.5 9.5 6.8 14.6 9.8l5.4 3.1c5 2.8 10.2 5.3 15.5 7.6c8.7 3.7 18.6 .9 25-6.2l19.8-22.2c6.8 1.1 13.8 1.7 20.9 1.7s14.1-.6 20.9-1.7l19.8 22.2zM464 400c-26.5 0-48-21.5-48-48s21.5-48 48-48s48 21.5 48 48s-21.5 48-48 48z"/></svg>
                         Proyectos</a>
                     </li>
-                    <li><a href="#workExperience">
+                    <li><a href="#workExperience" id="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="color: beige;"><path fill="currentColor" d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></svg>
                         Experiencia laboral</a></li>
-                    <li><a href="#Niveles">
+                    <li><a href="#Niveles" id="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="color: beige;"><path fill="currentColor" d="M392.8 1.2c-17-4.9-34.7 5-39.6 22l-128 448c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l128-448c4.9-17-5-34.7-22-39.6zm80.6 120.1c-12.5 12.5-12.5 32.8 0 45.3L562.7 256l-89.4 89.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l112-112c12.5-12.5 12.5-32.8 0-45.3l-112-112c-12.5-12.5-32.8-12.5-45.3 0zm-306.7 0c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3l112 112c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l89.4-89.4c12.5-12.5 12.5-32.8 0-45.3z"/></svg>
                         Programación</a></li>
-                    <li><a href="#References">
+                    <li><a href="#References" id="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style="color: beige;"><path fill="currentColor" d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L512 316.8V128h-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48V352h28.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123zM96 128H0V352c0 17.7 14.3 32 32 32H64c17.7 0 32-14.3 32-32V128zM48 352c-8.8 0-16-7.2-16-16s7.2-16 16-16s16 7.2 16 16s-7.2 16-16 16zM544 128V352c0 17.7 14.3 32 32 32h32c17.7 0 32-14.3 32-32V128H544zm64 208c0 8.8-7.2 16-16 16s-16-7.2-16-16s7.2-16 16-16s16 7.2 16 16z"/></svg>
                         Referencias</a></li>
-                    <li><a href="#Contact">
+                    <li><a href="#Contact" id="nav-item">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" style="color: beige;"><path fill="currentColor" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
                         ¡Contáctame!</a></li>
                 </ul>
@@ -294,13 +296,13 @@
                     <!--en el input el parametro "name" es el que se va a conectar con el
                     servidor que reciba la informacion, de tal manera que la informacion
                     almacenada llega al servidor como un objeto { nombre : valor }-->
-                    <input class="validate formulario__grupo" type="date" name="fecha" id="fecha">
-					<i class="formulario__validacion-estado fas fa-times-circle" id="fecha-i"></i>
-                    <label for="fecha" class="label">Fecha de lectura de la hoja de vida</label>
-        
-                    <input class="animate__animated formulario__grupo" type="text" name="company" id="company" placeholder="Company Name">
+                    <input class="animate__animated formulario__grupo" type="text" name="company" id="company" placeholder="Company Name" style="text-align: center;">
 					<i class="formulario__validacion-estado fas fa-times-circle" id="company-i"></i>
                     <label for="company" class="label">Empresa interesada</label>
+
+                    <input class="validate formulario__grupo" type="date" name="fecha" id="fecha">
+					<i class="formulario__validacion-estado fas fa-times-circle" id="fecha-i"></i>
+                    <label for="fecha" class="label">Fecha de entrevista laboral</label>        
                     
                     <input class="formulario__grupo" type="time" name="hora" id="hora">
 					<i class="formulario__validacion-estado fas fa-times-circle" id="hora-i"></i>
@@ -308,15 +310,15 @@
                 </div>
 
                 <div class="form-right">
-                    <input class="animate__animated formulario__grupo" type="email" name="correo" id="correo" placeholder="company@email.com">
+                    <input class="animate__animated formulario__grupo" type="email" name="correo" id="correo" placeholder="company@email.com" style="text-align: center;">
 					<i class="formulario__validacion-estado fas fa-times-circle" id="correo-i"></i>
                     <label for="correo" class="label">Email empresarial</label>
         
-                    <input class="formulario__grupo" value="5" type="number" name="interes" id="interes" placeholder="5">
+                    <input class="formulario__grupo" value="5" type="number" name="interes" id="interes" placeholder="5" style="text-align: center;">
 					<i class="formulario__validacion-estado fas fa-times-circle" id="interes-i"></i>
                     <label for="interes" class="label">Nivel de interés del 1 al 5, siendo 5 muy interesado</label>
         
-                    <input class="animate__animated formulario__grupo" type="text" name="telefono" id="telefono" placeholder="Ingrese un número de contacto">
+                    <input class="animate__animated formulario__grupo" type="text" name="telefono" id="telefono" placeholder="Ingrese un número de contacto" style="text-align: center;">
 					<i class="formulario__validacion-estado fas fa-times-circle" id="telefono-i"></i>
                     <label for="telefono" class="label">Telefono de contacto</label>
                 </div>

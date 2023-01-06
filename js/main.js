@@ -152,8 +152,9 @@ $(function(){
     var ancho = $(window).width(),
         enlaces = $("#enlaces"),
         btnMenu = $("#btn-menu"),
-        iconoB = $("#btn-menu .iconoBars");
-        iconoX = $("#btn-menu .iconoX");
+        iconoB = $("#btn-menu .iconoBars"),
+        iconoX = $("#btn-menu .iconoX"),
+        navItem = $("#nav-item");
 
     // Vamos a hacer un condicional que detecte cuando el tamaño de la pagina sea menor a 1000px
     // Esta seccion del codigo se hace para detectar el tamaño inicial de la pantalla y asi
@@ -162,6 +163,7 @@ $(function(){
         enlaces.hide();
         iconoB.show();
         iconoX.hide();
+
     }
 
     // Esta sección es para intercambiar entre barras y X, segun si se despliega u ocultan los links del menu
@@ -174,6 +176,17 @@ $(function(){
         iconoB.toggle('slow');
     })
 
+    navItem.on('click', function(e){
+        if($(window).width() < 1000) {
+            enlaces.hide();
+    
+            let iconoB = $("#btn-menu .iconoBars");
+            let iconoX = $("#btn-menu .iconoX");
+            iconoX.toggle('slow');
+            iconoB.toggle('slow');
+        }
+    });
+
     // Esta funcion se ejecuta cada vez que se detecta un cambio de tamaño o resize de pantalla
     // Se utiliza para ajustar, automaticamente, el icono de barras y los enlaces segun el resize
     $(window).on('resize', function(){
@@ -185,6 +198,7 @@ $(function(){
             enlaces.hide();
             iconoB.show();
             iconoX.hide();
+
         }
     })
 });
@@ -196,7 +210,7 @@ const formulario = document.getElementById("formulario");
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    company: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+    company: /^[a-zA-Z0-9\s\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
     interes: /^[1-5]{1}$/ // un numero del 1 al 5
