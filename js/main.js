@@ -104,9 +104,9 @@ card3.addEventListener('mouseout', (e) => {
 /* ------------------- FORMULARIO ------------------- */
 // Animacion de cada uno de los inputs al pasar el mouse por encima
 
-const email = document.getElementById("email");
-const empresa = document.getElementById("Empresa");
-const telefono = document.getElementById("Telefono");
+const email = document.getElementById("correo");
+const empresa = document.getElementById("company");
+const telefono = document.getElementById("telefono");
 
 // INPUT 1
 email.addEventListener('mouseover', (e) => {
@@ -154,7 +154,6 @@ $(function(){
         btnMenu = $("#btn-menu"),
         iconoB = $("#btn-menu .iconoBars");
         iconoX = $("#btn-menu .iconoX");
-        // header = $('#header');
 
     // Vamos a hacer un condicional que detecte cuando el tamaño de la pagina sea menor a 1000px
     // Esta seccion del codigo se hace para detectar el tamaño inicial de la pantalla y asi
@@ -186,7 +185,88 @@ $(function(){
             enlaces.hide();
             iconoB.show();
             iconoX.hide();
-            // header.style.height('150px');
         }
     })
 });
+
+
+/* ------------------- VALIDACIÓN DE FORMULARIO ------------------- */
+
+const formulario = document.getElementById("formulario");
+const inputs = document.querySelectorAll('#formulario input');
+
+const expresiones = {
+    company: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,14}$/, // 7 a 14 numeros.
+    interes: /^[1-5]{1}$/ // un numero del 1 al 5
+}
+
+const campos = {
+    company : false,
+    correo : false,
+    telefono : false,
+    interes : false
+}
+
+// Esta funcion va a comprobar los campos que tengamos en los input
+const validarFormulario = (e) => {
+
+    switch (e.target.name) {
+        case "company":
+            validarCampo(expresiones.company, e.target, e.target.name);
+        break;
+        case "correo":
+            validarCampo(expresiones.correo, e.target, e.target.name);
+        break;
+        case "telefono":
+            validarCampo(expresiones.telefono, e.target, e.target.name);
+        break;
+        case "interes":
+            validarCampo(expresiones.interes, e.target, e.target.name);
+        break;
+        
+    }
+}
+
+const validarCampo = (expresion, input, campo) => {
+    // expresion será igual a --> expresiones.usuario --> La expresion que me permite validar el contenido de los campos
+    // input será igual a --> e.target --> Se refiere al campo sobre el que se esta escribiendo, con el fin de pedir su valor (.value)
+    if (expresion.test(input.value)){
+        document.getElementById(`${campo}`).classList.remove('formulario__grupo-incorrecto');
+        document.getElementById(`${campo}`).classList.add('formulario__grupo-correcto');
+        document.getElementById(`${campo}-i`).classList.remove('fa-times-circle');
+        document.getElementById(`${campo}-i`).classList.remove('formulario__grupo-incorrecto');
+        document.getElementById(`${campo}-i`).classList.add('fa-check-circle');
+        document.getElementById(`${campo}-i`).classList.add('formulario__grupo-correcto');
+        // document.querySelector(`#${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+
+        campos[campo] = true;
+
+    } else {
+        document.getElementById(`${campo}`).classList.add('formulario__grupo-incorrecto');
+        document.getElementById(`${campo}`).classList.remove('formulario__grupo-correcto');
+        document.getElementById(`${campo}-i`).classList.add('fa-times-circle');
+        document.getElementById(`${campo}-i`).classList.add('formulario__grupo-incorrecto');
+        document.getElementById(`${campo}-i`).classList.remove('fa-check-circle');
+        document.getElementById(`${campo}-i`).classList.remove('formulario__grupo-correcto');
+        // document.querySelector(`#${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+
+        campos[campo] = false;
+
+    }
+    // console.log(document.getElementById(`${campo}`).classList);
+}
+
+inputs.forEach((input) => {
+
+    input.addEventListener('keyup', validarFormulario); //Vamos a ejecutar una funcion que crearemos arriba cada vez que se cumpla
+    // que el usuario presiona y suelta una tecla
+    input.addEventListener('blur', validarFormulario); //Validar los datos de las entradas cuando
+    // Se de clic afuera del cuadro
+
+    /* input.addEventListener('keyup', () => {
+        console.log(input.value)}); */
+    
+});
+
