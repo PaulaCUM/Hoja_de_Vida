@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 /* ------------------- ANIMACION IMAGENES DE NIVEL ------------------- */
 // Leer la imagen - Funcion tipo flecha
 const imagen1 = document.getElementById('imagen1');
@@ -61,6 +62,7 @@ observador.observe(imagen7);
 observador.observe(imagen8);
 observador.observe(imagen9);
 observador.observe(imagen10);
+
 
 /* ------------------- REFERENCIAS PERSONALES ------------------- */
 // Animacion de cada una de las tarjetas de referencias al pasar el mouse por encima
@@ -135,3 +137,56 @@ telefono.addEventListener('mouseover', (e) => {
 telefono.addEventListener('mouseout', (e) => {
     telefono.classList.remove('animate__pulse');
 })
+
+
+/* ------------------- MENU DESPLEGABLE Y ADAPTABLE ------------------- */
+$(function(){
+    var header = document.getElementById('header');
+    var headroom = new Headroom(header);
+
+    headroom.init();
+
+    // ---------> Menu responsive
+
+    // Calcular el ancho de la pagina
+    var ancho = $(window).width(),
+        enlaces = $("#enlaces"),
+        btnMenu = $("#btn-menu"),
+        iconoB = $("#btn-menu .iconoBars");
+        iconoX = $("#btn-menu .iconoX");
+        // header = $('#header');
+
+    // Vamos a hacer un condicional que detecte cuando el tamaño de la pagina sea menor a 1000px
+    // Esta seccion del codigo se hace para detectar el tamaño inicial de la pantalla y asi
+    // saber si se deme mostrar u ocultar el menu
+    if(ancho < 1000){
+        enlaces.hide();
+        iconoB.show();
+        iconoX.hide();
+    }
+
+    // Esta sección es para intercambiar entre barras y X, segun si se despliega u ocultan los links del menu
+    btnMenu.on('click', function(e){
+        enlaces.slideToggle();
+
+        let iconoB = $("#btn-menu .iconoBars");
+        let iconoX = $("#btn-menu .iconoX");
+        iconoX.toggle('slow');
+        iconoB.toggle('slow');
+    })
+
+    // Esta funcion se ejecuta cada vez que se detecta un cambio de tamaño o resize de pantalla
+    // Se utiliza para ajustar, automaticamente, el icono de barras y los enlaces segun el resize
+    $(window).on('resize', function(){
+        if($(this).width() > 1000){
+            enlaces.show();
+            iconoB.hide();
+            iconoX.hide();
+        } else {
+            enlaces.hide();
+            iconoB.show();
+            iconoX.hide();
+            // header.style.height('150px');
+        }
+    })
+});
