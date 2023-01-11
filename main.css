@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
     /*Sin margenes*/
     margin: 0;
+    /* el font-size por defecto es de 16px */
+    /* El REM toma el font-size de la fuente y lo usa como unidad de medida
+    Mientras que el EM toma el font-size mas cercano y lo usa como unidad de medida*/
+    font-size: 16px;
 }
 
 .left {
@@ -28,35 +32,35 @@ header {
 
 .header-container {
     margin: auto;
-    max-width: 1700px;
-    padding: 0.3rem 0.3rem 0rem;
+    max-width: 106.25em; /*1700px;*/
+    padding: 0.3em 0.3em 0em;
 }
 
 /* MATERILIZE */
 .header-container h1 {
-    height: 50px;
+    height: 3.13rem; /*50px*/
     display: inline;
 }
 
 .header-container img {
-    height: 60px;
+    height: 3.75em; /* 60px */
     border-radius: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 15px;
+    margin-top: 10px; 
 }
 
 .header-container h1 a {
-    font-size: 36px;
+    font-size: 2.25rem;/* 36px */
     text-align: left;
     color: beige;
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: 15px; /* 15px */
     padding-top: 0;
 }
 
 .header-container svg {
-    height: 28px;
-    margin: 22px;
+    height: 1.75em;/* 28px */
+    margin: 1.38em;/* 22px */
     display: none;
 }
 
@@ -64,7 +68,7 @@ header {
 header .menu {
     background: none;
     box-shadow: none;    
-    height: 35px;
+    height: 2.19em;/* 35px */
 
     margin: auto;
     display: flex;
@@ -76,7 +80,7 @@ header .menu {
 
 header .menu ul {
     margin: auto 0;
-    height: 30px;
+    height: 1.88em;/* 30px */
 }
 
 header .menu li {
@@ -85,8 +89,8 @@ header .menu li {
     /* display: flex;
     vertical-align: top; */
     list-style: none;
-    margin: auto 5px;
-    height: 30px;
+    margin: auto 0.31em;/* 5px */
+    height: 1.88em;/* 30px */
 }
 
 header .menu a {
@@ -101,8 +105,9 @@ header .menu a {
 
     color: beige;
     text-decoration: none;
-    padding: 0rem 1rem;
-    height: 30px;
+    padding: 0rem 1em;
+    height: 1.88em;/* 30px */
+    /* font-size: 1rem; */
     /* vertical-align: top; */
 }
 
@@ -130,7 +135,7 @@ body {
 }
 
 .headroom--unpinned {
-    transform: translateY(-250%); /* -70% para mostrar solo los links*/
+    transform: translateY(-350%); /* -70% para mostrar solo los links*/
 
 }
 
@@ -161,14 +166,16 @@ body {
         float: none;
         background-color: rgba(9, 185, 180, 0.8);
         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        font-size: 24px;
+        padding-top: 0.6rem;        
     }    
 
 }
 
 /*-------------PRESENTATION-------------*/
 .presentation {
-    height: 720px;
-    font-size: 18px;
+    height: 720px;/* 720px */
+    font-size: 1.125rem;/* 18px */
 }
 
 .Video-Programming {
@@ -197,17 +204,18 @@ body {
 .presentation-text {
     color: white;
     text-align: center;
-    padding: 220px 150px;
+    padding: 13.13rem 3.125em;/* 210px 50px->(antes 150px)*/
     margin: auto;
 }
 
 .presentation-text h2 {
-    font-size: 35px;
+    font-size: 2.19em;/* 35px */
+    /* margin: 0; */
 }
 
 .presentation-text p {
-    margin: 10px auto;
-    width: 70%;
+    margin: 0.625rem auto;/* 10px */
+    /* width: 70%; */
 }
 
 .presentation-text a {
@@ -216,12 +224,12 @@ body {
 }
 
 .presentation-text svg, img {
-    height: 45px;
+    height: 2.81rem;/* 45px */
     user-select: none;
     /* color: aqua; */
 }
 
-/*-------------HABILIDADES O SKILLS-------------*/
+/*-------------PROYECTOS DESARROLLADOS (skills)-------------*/
 
 #particles-js {
     width: 100%;
@@ -233,8 +241,8 @@ body {
 }
 
 .skills {
-    height: 650px;
-    font-size: 18px;
+    height: 40.625rem;/* 650px */
+    font-size: 1.125rem;/* 18px */
     background: url("./Recursos/Imagenes/Fondo\ suave.jpg");
     background-position: center;
     background-size: cover;
@@ -242,28 +250,28 @@ body {
     /* position: relative; */
 }
 
-.skills-text {
+/* .skills-text {
     width: 50%;
     height: 50%;
 }
 
 .skills-content {
     text-align: justify;
-    padding: 130px 30px;
-}
+    padding: 8.125rem 1.875rem;
+} */
 
 .skills-title {
     text-align: center;
     margin: 2rem;
-    font-size: 35px;
+    font-size: 2.19rem;/* 35px */
 }
 
-.skills-centrar {
+/* .skills-centrar {
     margin: auto;
-}
+} */
 
 .carousel-item h3 {
-    font-size: 34px;
+    font-size: 2.125rem;/* 34px */
     text-align: center;
     text-shadow: 1px 1px 1px white, 1px 1px 5px white;
 
@@ -286,7 +294,9 @@ body {
 /* >>>>> ESTILOS MATERIALIZE <<<<< */
 
 .carousel {
-    min-height: 500px;
+    min-height: 31.25rem;/* 500px */
+    /*min-height: 12.5rem;/* 200px */
+
 }
 
 .skills .carousel .carousel-item {
@@ -296,8 +306,8 @@ body {
     align-items: center;
     user-select: none;
     /* background-color: gray; */
-    width: 650px;
-    height: 500px;
+    width: 650px;/* 650px */
+    height: 500px;/* 500px */
 }
 
 .carousel .carousel-item img {
@@ -313,12 +323,12 @@ body {
 
 .skills .carousel .indicators .indicator-item {
     /* border-radius: 0; */
-    transform: rotate(45deg);
-    margin: 10px 10px;
+    /* transform: rotate(45deg); */
+    margin: 0.625rem 0.625rem; /* 10px 10px */
     background: darkorchid;
 }
 
-#skills-img1 {
+/* #skills-img1 {
     background: url(./Recursos/Imagenes/Brazo\ robot.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -330,13 +340,13 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 /*-------------WORK EXPERIENCE-------------*/
 
 .workExperience {
     clear: both;
-    font-size: 20px;
+    font-size: 1.25rem;/* 20px */
     text-align: center;
     background: url(./Recursos/Imagenes/Paisaje+Yoga.jpg);
     background-position: center;
@@ -344,24 +354,24 @@ body {
 }
 
 .workEx-inner {
-    padding: 3rem;
+    padding: 3em;
     color: white;
 }
 
 .workEx-title {
     margin: 0 3rem 2rem;
-    font-size: 38px;
+    font-size: 2.375rem;/* 38px */
 }
 
 .workExperience table ul li {
-    padding: 4px 0;
+    padding: 0.25rem 0;/* 4px 0 */
     list-style-type: circle;
     position: relative;
-    left: 18px;
+    left: 1.125rem;/* 18px */
 }
 
 .workExperience table td {
-    padding: 25px 10px;
+    padding: 1.56rem 0.63rem;/* 25px 10px */
     /* font-size: 18px; */
 }
 
@@ -373,17 +383,17 @@ body {
 .Nombre_td {
     width: 40%;
     text-align: left;
-    font-size: 18px;
+    font-size: 1.125rem;/* 18px */
 }
 
 .Descripcion_td {
     width: 50%;
     text-align: left;
-    font-size: 16px;
+    font-size: 1rem; /* 16px */
 }
 
 #Logos {
-    height: 80px;
+    height: 5rem;/* 80px */
     border-radius: 10px;
 }
 
@@ -405,7 +415,7 @@ body {
    margin: 0;
    padding: 2rem 0;
    text-align: center;
-   font-size: 38px;
+   font-size: 2.37rem;/* 38px */
    /* color: white; */
 }
 
@@ -415,22 +425,25 @@ body {
 
 .Niveles .niveles-tabla th {
     text-align: center;
+    padding: 0.5rem 0;
 }
 
-.Niveles .niveles-tabla img {
+.Niveles .niveles-tabla td img {
     /* width: 80%; */
-    height: 95px;
+    /* height: 5.9375rem;/* 95px */
+    width: 60%;
+    height: 6.25rem;/* 100px */
     opacity: 0;
     transform: scale(0.8);
     transition: 1s ease-in-out all;
 }
 
 .Niveles .niveles-tabla img.izquierda {
-    transform: translate(-40px);
+    transform: translate(-20px);
 }
 
 .Niveles .niveles-tabla img.derecha {
-    transform: translate(40px);
+    transform: translate(20px);
 }
 
 .Niveles .niveles-tabla img.abajo {
@@ -446,18 +459,18 @@ body {
 
 .References {
     width: 95%;
-    height: 300px;
+    height: 18.75rem;/* 300px */
     margin: auto;
 }
 
 .References h2 {
-    font-size: 38px;
+    font-size: 2.375rem;/* 38px */
     text-align: center;
 }
 
 .References h3 {
-    font-size: 30px;
-    margin: 0px 0px 15px;
+    font-size: 1.875rem;/* 30px */
+    margin: 0px 0px 0.94rem;/* 0 0 15px */
     text-align: center;
 }
 
@@ -465,12 +478,12 @@ body {
     transition: box-shadow 0.3s ease;
     background-color: bisque;
     margin: 1rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     padding: 1rem 1.5rem;
     cursor: pointer;
     float: inline-start;
     width: 30%;
-    height: 200px;
+    height: 12.5rem;/* 200px */
 }
 
 .References .Post:hover {
@@ -479,15 +492,17 @@ body {
 
 .References .Post .Logos-referencias {
     height: 35%;
+    /* width: 20%; */
     border-radius: 10px;
     display: block;
-    margin: 0 auto 15px;
+    margin: 0 auto 0.94rem;/* 15px */
 }
 
 .References .Post svg {
-    height: 15px;
+    /* height: 15px; */
+    width: 0.94rem;/* 15px */
     display: inline-block;
-    margin: 0 10px;    
+    margin: 0 0.625rem;/* 10px */  
 }
 
 .References .Post p {
@@ -496,15 +511,27 @@ body {
 
 }
 
+.References .References-Cards .Card1 {
+    grid-area: Card1;
+}
+
+.References .References-Cards .Card2 {
+    grid-area: Card2;
+}
+
+.References .References-Cards .Card3 {
+    grid-area: Card3;
+}
+
 /*------------- FORMULARIO -------------*/
 
 .Contact {
-    height: 560px;
+    height: 39rem;/* 560px */
     text-align: center;
 }
 
 .Contact h2 {
-    font-size: 38px;
+    font-size: 2.375rem;/* 38px */
     text-align: center;
     margin: 2rem 0 3rem;
 }
@@ -516,32 +543,34 @@ body {
 .form-left {
     text-align: center;
     width: 50%;
-    height: 240px;
+    height: 15rem;/* 240px */
     float: left;
 }
 
 .form-right {
     width: 50%;
-    height: 240px;
+    height: 15rem;/* 240px */
     float: right;
 }
 
 .Contact form label {
     display: block;
     margin-bottom: 1.3rem;
-    font-size: 18px;
+    font-size: 1.25rem;/* 20px */
     color: steelblue;
     padding: 0;
 }
 
 .Contact form input[type="text"] { /* , input[type="time"], input[type="date"], input[type="email"], input[type="number"] */
-    width: 16rem;
+    width: 18rem;
     height: 2rem;
+    /* border: 1px solid rgb(142, 142, 142); */
 }
 
 .Contact form input[type="time"] {
     width: 4rem;
     height: 2rem;
+    /* border: 1px solid rgb(142, 142, 142); */
 }
 
 .Contact form input[type="date"] {
@@ -561,12 +590,13 @@ body {
 
 .Contact form textarea {
     margin: 0.5rem;
+    margin-top: 0;
     width: 60%;
-    height: 80px;
+    height: 5rem;/* 80px */
 }
 
 .Contact form input[type="submit"] {
-    font-size: 16px;
+    font-size: 1rem;/* 16px */
     /* margin: 1.5rem; */
     height: 3rem;
     width: 12rem;
@@ -598,7 +628,6 @@ button[type="button"] {
 .Contact .formulario .formulario__grupo-incorrecto  {
 	border-bottom: 3px solid #bb2929;
     color: #bb2929;
-
 }
 
 .Contact .formulario .formulario__validacion-estado {
@@ -623,6 +652,7 @@ footer {
     text-align: left;
     height: 5rem;
     padding: 1rem;
+    font-size: 0.5rem;
 }
 
 footer p {
@@ -632,3 +662,235 @@ footer p {
 footer a {
     color: aquamarine;
 }
+
+/*------------- MEDIQUERIES PARA WEB RESPONSIVE -------------*/
+
+/* PANTALLAS GRANDES */
+@media screen and (max-width: 1000px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* TABLETS */
+@media screen and (max-width: 900px) {
+    
+    .References {
+        height: 34rem;
+    }
+
+    .References .Post {        
+        width: 90%;
+        height: 12.5rem;/* 200px */
+        margin: 1.25rem auto;
+    }
+
+    .References .References-Cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:             
+            'Card1 Card2'
+            'Card3 Card3';
+    }
+
+    .Niveles .niveles-tabla td img {
+        /* width: 80%; */
+        /* height: 5.9375rem;/* 95px */
+        width: 60%;
+        height: 5rem;/* 80px */
+    }
+
+    .Contact {
+        height: 57rem;
+        
+    }
+
+    .form-left {
+        width: 90%;
+        margin: 0 auto;
+        float: none;
+    }
+    
+    .form-right {
+        width: 90%;
+        margin: 40px auto;
+        float: none;
+    }
+
+    footer {
+        height: 6.5rem;
+    }
+
+    footer p {
+        display: block;
+    }
+    
+}
+
+/* CELULARES */
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 12px;
+    }
+
+    .Niveles .niveles-tabla td img {        
+        width: 60%;
+        height: 3.7rem;
+    }
+
+    .References {
+        height: 48rem;
+        margin: 0 auto;
+    }
+
+    .References .Post {        
+        width: 95%;
+        height: 12.5rem;/* 200px */
+        margin: 1rem auto;
+    }
+
+    .References .References-Cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:             
+            'Card1 Card1 Card1'
+            'Card2 Card2 Card2'
+            'Card3 Card3 Card3';
+        margin: 0 auto;
+    }
+
+    footer {
+        height: 10rem;
+    }
+
+    footer p {
+        display: block;
+        margin: auto;
+    }
+
+}
+
+/* CELULARES PEQUEÑOS */
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 10px;
+    }
+
+    .header-container h1 {
+        height: 1.6rem; /*50px*/
+    }
+
+    .header-container h1 a {
+        font-size: 1.375rem;
+        padding-top: 2px;
+        float: inline-start;
+    }
+
+    .header-container img {
+        height: 2.81rem; /* 45px */
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 2px;
+    }
+
+    .presentation-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills h3 {
+        font-size: 1.5rem;
+    }
+
+    .skills p {
+        font-size: 0.8rem;
+    }
+    
+    .presentation-text svg, img {
+        height: 2rem;
+    }
+
+    .workExperience h2 {
+        font-size: 1.5rem;
+    }
+
+    .Niveles h2 {
+        font-size: 1.5rem;
+    }
+
+    .Niveles .niveles-tabla td img {        
+        width: 45%;
+        height: 2rem;
+    }
+
+    .Niveles .niveles-tabla th {
+        font-size: 0.75rem; /* 12px */
+        padding: 2px 0;
+    }
+
+    .References h2 {
+        font-size: 1.5rem;
+    }
+
+    .Post h3 {
+        font-size: 1.5rem;
+    }
+
+    .Post p {
+        font-size: 1rem;
+    }
+
+    .Contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .Contact .label {
+        font-size: 1rem;
+    }
+
+    .Contact .label-comentario {
+        font-size: 1rem;
+    }
+
+    .Contact #Comentario {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+/* @media screen and (max-width: 1000px) {
+    header .menu {
+        flex-direction: column;
+        background: none;
+    }
+
+    header .header-container svg{
+        display: inline-block;
+    }
+
+    Con esto los enlaces aparecen en fila 
+    /* header .menu .enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    } 
+
+    /* Con esto los enlaces aparecen uno debajo del otro
+    header .menu .enlaces li {
+        display: block;
+        float: none;
+        background-color: rgba(9, 185, 180, 0.8);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }    
+
+} */
