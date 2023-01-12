@@ -353,41 +353,53 @@ body {
     background-size: cover;
 }
 
-.workEx-inner {
-    padding: 3em;
-    color: white;
-}
-
 .workEx-title {
-    margin: 0 3rem 2rem;
+    margin: 0 2rem 2rem;
     font-size: 2.375rem;/* 38px */
+    color: white;
+    padding-top: 2rem;
 }
 
-.workExperience table ul li {
+.workEx-inner {
+    display: grid;
+    padding: 1rem 2.7rem;
+    margin-bottom: 2rem;
+    color: white;
+    grid-gap: 2.5rem 1.5rem;
+    align-items: center;
+    align-content: space-between;
+    grid-template-columns: 10% 25% auto;
+    grid-template-areas: 
+        ' ETimg   ETname   ETdes'
+        ' LSimg   LSname   LSdes'
+        'UMNGimg UMNGname UMNGdes';
+}
+
+.workExperience .workEx-inner ul li {
     padding: 0.25rem 0;/* 4px 0 */
-    list-style-type: circle;
+    list-style: circle;
     position: relative;
     left: 1.125rem;/* 18px */
+    font-size: 1rem;
 }
 
-.workExperience table td {
-    padding: 1.56rem 0.63rem;/* 25px 10px */
-    /* font-size: 18px; */
-}
+/* .workExperience table td {
+    padding: 1.56rem 0.63rem;
+} */
 
 .Logo_td {
-    width: 10%;
+    /* width: 10%; */
     text-align: right;
 }
 
 .Nombre_td {
-    width: 40%;
+    /* width: 40%; */
     text-align: left;
     font-size: 1.125rem;/* 18px */
 }
 
 .Descripcion_td {
-    width: 50%;
+    /* width: 50%; */
     text-align: left;
     font-size: 1rem; /* 16px */
 }
@@ -395,6 +407,42 @@ body {
 #Logos {
     height: 5rem;/* 80px */
     border-radius: 10px;
+}
+
+.workEx-inner .ETimg {
+    grid-area: ETimg;
+}
+
+.workEx-inner .ETname {
+    grid-area: ETname;
+}
+
+.workEx-inner .ETdes {
+    grid-area: ETdes;
+}
+
+.workEx-inner .LSimg {
+    grid-area: LSimg;
+}
+
+.workEx-inner .LSname {
+    grid-area: LSname;
+}
+
+.workEx-inner .LSdes {
+    grid-area: LSdes;
+}
+
+.workEx-inner .UMNGimg {
+    grid-area: UMNGimg;
+}
+
+.workEx-inner .UMNGname {
+    grid-area: UMNGname;
+}
+
+.workEx-inner .UMNGdes {
+    grid-area: UMNGdes;
 }
 
 /*------------- HABILIDADES DE PROGRAMACION -------------*/
@@ -675,6 +723,35 @@ footer a {
 /* TABLETS */
 @media screen and (max-width: 900px) {
     
+    .workEx-inner {        
+        align-content: space-between;
+        grid-template-columns: 80% auto;
+        grid-template-areas: 
+            ' ETname   ETimg  '
+            ' ETdes    ETdes   '
+            ' LSname  LSimg'
+            ' LSdes    LSdes  '
+            ' UMNGname UMNGimg'
+            'UMNGdes UMNGdes  ';
+    }
+
+    .Logo_td {
+        text-align: left;
+    }
+    
+    .Nombre_td {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    .workEx-inner .Nombre_td em {
+        font-size: .9rem;
+    }
+
+    .workEx-inner .Nombre_td b {
+        font-size: 1.5rem;
+    }
+
     .References {
         height: 34rem;
     }
@@ -734,6 +811,41 @@ footer a {
         font-size: 12px;
     }
 
+    .workEx-inner {        
+        grid-gap: 2.5rem 1.5rem;
+        align-content: space-between;
+        grid-template-columns: 80% auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            ' ETname ETimg   '
+            ' ETdes    ETdes   '
+            'LSname  LSimg  '
+            ' LSdes    LSdes  '
+            'UMNGname  UMNGimg '
+            'UMNGdes UMNGdes  ';
+    }
+
+    .workEx-inner #Logos {
+        height: 4rem;
+    }
+
+    .Logo_td {
+        text-align: left;
+    }
+    
+    .Nombre_td {
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    /* .workEx-inner .Nombre_td em {
+        font-size: .9rem;
+    } */
+
+    .workEx-inner .Nombre_td b {
+        font-size: 1.3rem;
+    }
+
     .Niveles .niveles-tabla td img {        
         width: 60%;
         height: 3.7rem;
@@ -778,6 +890,11 @@ footer a {
         font-size: 10px;
     }
 
+    .workEx-inner {        
+        grid-gap: 2.7rem 1rem;
+        grid-template-rows: max-content;
+    }
+
     .header-container h1 {
         height: 1.6rem; /*50px*/
     }
@@ -816,7 +933,7 @@ footer a {
     }
 
     .workExperience h2 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .Niveles h2 {
